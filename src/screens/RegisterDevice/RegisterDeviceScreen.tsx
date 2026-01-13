@@ -7,8 +7,8 @@ import Style from './Style';
 import { initGrpcClient } from '../../services/client';
 import { saveSettings } from '../../db/SQLite/database';
 import { useNavigation } from '@react-navigation/native';
-import { checkRegsiterDevice } from './checkRegsiterDevice';
-import { GetUsers } from '../../services/apiAuth';
+import { checkRegsiterDevice } from '../../User/checkRegsiterDevice';
+import { GetUsers } from '../../User/GetUsers';
 
 interface DeviceCredentails {
   code: number;

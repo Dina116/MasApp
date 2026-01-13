@@ -1,5 +1,5 @@
-import { Empty } from '../../proto/mobile_pb';
-import { getMetaData, initGrpcClient } from '../../services/client';
+import { Empty } from '../proto/mobile_pb';
+import { getMetaData, initGrpcClient } from '../services/client';
 
 export function checkConnectionWithVersion(): Promise<boolean> {
   return new Promise(async (resolve, reject) => {

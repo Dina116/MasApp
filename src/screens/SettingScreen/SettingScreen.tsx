@@ -6,7 +6,7 @@ import Style from './Styles';
 import { saveSettings } from '../../db/SQLite/database';
 import { initGrpcClient } from '../../services/client';
 import { useLoading } from '../../loading';
-import { checkConnectionWithVersion } from './checkConnectionWithVersion';
+import { checkConnectionWithVersion } from '../../User/checkConnectionWithVersion';
 
 interface SettingsCredentails {
   ip: string;

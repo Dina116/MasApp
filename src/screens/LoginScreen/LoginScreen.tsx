@@ -7,14 +7,8 @@ import { Controller, useForm } from 'react-hook-form';
 import IonIcon from 'react-native-vector-icons/Ionicons';
 import { RouteProp, useNavigation, useRoute } from '@react-navigation/native';
 import { useLoading } from '../../loading';
-// import { loginRequest } from '../../services/apiAuth';
-import { Login } from './Login';
-// import storage from '../../services/storage';
-// import { useAuth } from '../../auth/useAuth';
-// import { getSettings } from '../../db/SQLite/database';
-// import { request } from '../../services/request';
-// import { MobileService } from '../../proto/mobile_pb_service';
-// import { GetUsersRequest } from '../../proto/mobile_pb';
+import { Login } from '../../User/Login';
+
 
 interface UserCredentails {
   userName: string;
@@ -25,7 +19,6 @@ type RootStackParamList = {
 };
 type LoginScreenRouteProp = RouteProp<RootStackParamList, 'Login'>;
 export default function LoginScreen() {
-  // const userData = useRef<Record<string, unknown> | null>(null);
   const location: string = '';
   const navigation = useNavigation();
   const { ShowLoading, HideLoading } = useLoading();
@@ -117,16 +110,3 @@ export default function LoginScreen() {
     </LinearGradient>
   );
 }
-
-/*
-      if (data.userName.toLowerCase() === 'mas' && data.password === '963') {
-        const res = await loginRequest();
-        navigation.navigate('HomeScreen' as never);
-        console.log('Login successful, updating auth state.');
-        console.log('valid inputs');
-        if (!res) {
-          console.log('User not registered on server (first time login)');
-        } else {
-          console.log('Users from server:', res);
-        }
-      }  */

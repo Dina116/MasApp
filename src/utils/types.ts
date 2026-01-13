@@ -11,15 +11,6 @@ import {
   ViewStyle,
 } from 'react-native';
 
-export type LoginPayload = {
-  user: string;
-  password: string;
-};
-
-export type LoginResponse = {
-  token: string;
-};
-
 export interface TouchableWebProps extends TouchableWithoutFeedbackProps {
   onMouseEnter?: (e: NativeSyntheticEvent<TargetedEvent>) => void;
   onMouseLeave?: (e: NativeSyntheticEvent<TargetedEvent>) => void;

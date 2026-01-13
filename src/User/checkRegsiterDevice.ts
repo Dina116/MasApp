@@ -1,6 +1,6 @@
-import { getSettings } from '../../db/SQLite/database';
-import { HHDevice, RegsiterDeviceRequest } from '../../proto/mobile_pb';
-import { getMetaData, initGrpcClient } from '../../services/client';
+import { getSettings } from '../db/SQLite/database';
+import { HHDevice, RegsiterDeviceRequest } from '../proto/mobile_pb';
+import { getMetaData, initGrpcClient } from '../services/client';
 
 export function checkRegsiterDevice(
   name: string,

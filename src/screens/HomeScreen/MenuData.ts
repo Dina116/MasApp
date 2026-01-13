@@ -1,4 +1,4 @@
-import { UserRoles } from '../../auth/userRoles';
+import { UserRoles } from '../../User/userRoles';
 import { MenuItem } from './MenuItem';
 
 export interface LayoutData extends Partial<MenuItem> {

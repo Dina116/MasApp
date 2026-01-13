@@ -1,6 +1,4 @@
-// import AuthStack from './src/navigation/Stack/AuthStack/AuthStack';
 import { NavigationContainer } from '@react-navigation/native';
-import { navigationRef } from './src/navigation/navigationRef ';
 import { QueryClientProvider } from '@tanstack/react-query';
 import { queryClient } from './src/services/queryClient ';
 import NetInfo from '@react-native-community/netinfo';
@@ -9,9 +7,7 @@ import { LoadingProvider } from './src/loading';
 import MainStack from './src/navigation/Stack/MainStack/MainStack';
 import { initGrpcClient } from './src/services/client';
 import { useEffect, useState } from 'react';
-import { AuthProvider } from './src/auth/useAuth';
 import { Database } from './src/db/SQLite/database';
-// import AppNavigator from './src/navigation/Stack/AppNavigator';
 
 function App() {
   const [isClientReady, setClientReady] = useState(false);
@@ -41,15 +37,13 @@ function App() {
   }
 
   return (
-    <AuthProvider>
-      <QueryClientProvider client={queryClient}>
-        <LoadingProvider>
-          <NavigationContainer ref={navigationRef}>
-            <MainStack />
-          </NavigationContainer>
-        </LoadingProvider>
-      </QueryClientProvider>
-    </AuthProvider>
+    <QueryClientProvider client={queryClient}>
+      <LoadingProvider>
+        <NavigationContainer>
+          <MainStack />
+        </NavigationContainer>
+      </LoadingProvider>
+    </QueryClientProvider>
   );
 }
 

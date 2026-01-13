@@ -1,11 +1,8 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-// import AuthStack from '../AuthStack/AuthStack';
-// import HomeStack from '../HomeStack/HomeStack';
 import LoginScreen from '../../../screens/LoginScreen/LoginScreen';
 import HomeScreen from '../../../screens/HomeScreen/HomeScreen';
 import SettingScreen from '../../../screens/SettingScreen/SettingScreen';
 import RegisterDeviceScreen from '../../../screens/RegisterDevice/RegisterDeviceScreen';
-import DeviceInfoScreen from '../../../screens/DeviceInfo/DeviceInfoScreen';
 
 export default function MainStack() {
   const Stack = createNativeStackNavigator();
@@ -15,7 +12,6 @@ export default function MainStack() {
       <Stack.Screen name="HomeScreen" component={HomeScreen} />
       <Stack.Screen name="SettingScreen" component={SettingScreen} />
       <Stack.Screen name="RegisterDeviceScreen" component={RegisterDeviceScreen} />
-      <Stack.Screen name="DeviceInfoScreen" component={DeviceInfoScreen} />
     </Stack.Navigator>
   );
 }

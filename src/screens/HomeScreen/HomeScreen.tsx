@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { MenuGridList } from './MenuGridList';
-import { UserRoles } from '../../auth/userRoles';
+import { UserRoles } from '../../User/userRoles';
 import { useNavigation } from '@react-navigation/native';
 import { data as getLayoutData } from './MenuData';
 
