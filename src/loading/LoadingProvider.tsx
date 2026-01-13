@@ -1,6 +1,7 @@
 import { Modal } from 'react-native';
 import { LoadingView } from './LoadingView';
 import { createContext, useCallback, useContext, useState } from 'react';
+
 type Props = { children: any };
 
 //data which the provider recieve to run loading

@@ -11,6 +11,7 @@ import { Database } from './src/db/SQLite/database';
 
 function App() {
   const [isClientReady, setClientReady] = useState(false);
+
   onlineManager.setEventListener(setOnline =>
     NetInfo.addEventListener(state => {
       setOnline(!!state.isConnected);
@@ -29,13 +30,11 @@ function App() {
         console.error('Failed to initialize gRPC client:', error);
       }
     };
-
     initializeApp();
   }, []);
   if (!isClientReady) {
-    return null;
+    return null; // for not render the app until everything is ready
   }
-
   return (
     <QueryClientProvider client={queryClient}>
       <LoadingProvider>

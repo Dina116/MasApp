@@ -34,7 +34,7 @@ export default function RegisterDeviceScreen() {
       await checkRegsiterDevice(data.name, data.password, data.code);
       console.log('pass from checkRegsiterDevice ');
       await GetUsers();
-      console.log('pass from cGetUsers ');
+      console.log('pass from GetUsers ');
       navigation.navigate('LoginScreen' as never);
     } catch (err) {
       console.error('Failed to register device:', err);

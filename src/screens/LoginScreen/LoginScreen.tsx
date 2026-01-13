@@ -18,6 +18,7 @@ type RootStackParamList = {
   Login: { reset?: boolean };
 };
 type LoginScreenRouteProp = RouteProp<RootStackParamList, 'Login'>;
+
 export default function LoginScreen() {
   const location: string = '';
   const navigation = useNavigation();
@@ -66,7 +67,7 @@ export default function LoginScreen() {
           <Controller
             control={control}
             name="userName"
-            rules={{ required: true }}
+            rules={{ required: "اسم الدخول مطلوب" }}
             render={props => (
               <View style={Style.inputContainer}>
                 <IonIcon name="person-outline" size={22} color="#C0C0C0" />
@@ -84,7 +85,7 @@ export default function LoginScreen() {
           <Controller
             control={control}
             name="password"
-            rules={{ required: true }}
+            rules={{ required: "كلمة المرور مطلوبة" }}
             render={props => (
               <View style={Style.inputContainer}>
                 <IonIcon name="lock-closed-outline" size={22} color="#C0C0C0" />
